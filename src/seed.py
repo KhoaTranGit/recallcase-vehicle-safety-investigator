@@ -8,8 +8,9 @@ results from external LLM APIs or across different hardware/library versions.
 import os
 import random
 
+SEED = 69420 
 
-def seed_all(seed: int = 42, deterministic: bool = True) -> None:
+def seed_all(seed: int = SEED, deterministic: bool = True) -> None:
     """Seed Python, NumPy, PyTorch (CPU/CUDA), and TensorFlow if installed.
 
     Args:
@@ -61,4 +62,4 @@ def seed_all(seed: int = 42, deterministic: bool = True) -> None:
 
 if __name__ == "__main__":
     seed_all()
-    print("Random seeds initialized (seed=42).")
+    print(f"Random seeds initialized (seed={SEED}).")
